@@ -6,6 +6,7 @@ import ExperiencesList from "./components/ExperiencesList";
 import NavBar from "./components/NavBar";
 import PersonalInfo from "./components/PersonalInfo";
 import ProjectList from "./components/ProjectList";
+import SkillList from "./SkillList";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,26 +21,42 @@ export default function Home() {
       </Head>
 
       <main className=" bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen">
+        <section className="min-h-screen dark: text-gray-300">
           <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
           <PersonalInfo />
         </section>
 
         {/* Experience section */}
-        <section>
+        <section className="dark: text-gray-300">
           <ExperiencesList />
         </section>
 
         {/* Education section */}
-        <section>
+        <section className=" dark: text-gray-300">
           <EducationsList />
         </section>
 
         {/* Skill section */}
-          
+        <section className="dark: text-gray-300">
+          <SkillList />
+        </section>
+
         {/* Project */}
-        <section>
+        <section className="dark: text-gray-300">
           <ProjectList />
+        </section>
+
+        {/* footer  */}
+        <section className="dark: text-gray-300">
+          <footer style={{ marginTop: "5rem", marginBottom: "3rem" }}>
+            <hr />
+            <p className="text-center ">
+              &copy; 2023 Shing Him Yip. The&nbsp;
+              <a href="https://github.com/">source code of this homepage</a>
+              &nbsp;is available at Github. Please feel free to extend it for
+              your own homepage.
+            </p>
+          </footer>
         </section>
       </main>
     </div>
