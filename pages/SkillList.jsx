@@ -1,6 +1,6 @@
 function SkillList() {
   return (
-    <div className="pt-10">
+    <div className="pt-10 dark:text-gray-300">
       <div className="SkillList md:grid grid-cols-12">
         <div className="SkillList_left md:col-span-4">
           <h2 className="text-4xl py-1 font-bold ">

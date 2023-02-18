@@ -16,7 +16,7 @@ const HKCC = {
 
 function EducationsList() {
   return (
-    <div className="pt-10">
+    <div className="pt-10 dark:text-gray-300">
       <div className="EducationsList md:grid grid-cols-12">
         <div
           // style={{ background: "red" }}

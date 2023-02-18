@@ -21,38 +21,40 @@ export default function Home() {
       </Head>
 
       <main className=" bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen dark: text-gray-300">
+        <section className="min-h-screen">
           <NavBar setDarkMode={setDarkMode} darkMode={darkMode} />
           <PersonalInfo />
         </section>
 
         {/* Experience section */}
-        <section className="dark: text-gray-300">
+        <section>
           <ExperiencesList />
         </section>
 
         {/* Education section */}
-        <section className=" dark: text-gray-300">
+        <section>
           <EducationsList />
         </section>
 
         {/* Skill section */}
-        <section className="dark: text-gray-300">
+        <section>
           <SkillList />
         </section>
 
         {/* Project */}
-        <section className="dark: text-gray-300">
+        <section className="">
           <ProjectList />
         </section>
 
         {/* footer  */}
-        <section className="dark: text-gray-300">
+        <section>
           <footer style={{ marginTop: "5rem", marginBottom: "3rem" }}>
             <hr />
-            <p className="text-center ">
+            <p className="text-center dark:text-gray-300">
               &copy; 2023 Shing Him Yip. The&nbsp;
-              <a href="https://github.com/">source code of this homepage</a>
+              <a className="text-blue-500" href="https://github.com/">
+                source code of this homepage
+              </a>
               &nbsp;is available at Github. Please feel free to extend it for
               your own homepage.
             </p>

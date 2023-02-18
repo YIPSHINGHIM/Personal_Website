@@ -59,10 +59,10 @@ const project5 = {
 export default class ProjectList extends Component {
   render() {
     return (
-      <div className="pt-10 ">
+      <div className="pt-10 dark:text-gray-300">
         <div className="ProjectList">
           <h2 className="text-4xl py-1 font-bold ">Project</h2>
-          <div className="grid sm:grid-col-2 md:grid-cols-3 gap-4">
+          <div className="pt-10 grid sm:grid-col-2 md:grid-cols-3 gap-4">
             <Project {...project1} />
             <Project {...project2} />
             <Project {...project3} />
