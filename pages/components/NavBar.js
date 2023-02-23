@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import pdf from "../../public/ShingHimYipCV.pdf";
 
 function NavBar(props) {
   return (
@@ -15,7 +16,8 @@ function NavBar(props) {
         <li>
           <Link
             className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 "
-            href="public/ShingHimYipCV.pdf"
+            href={pdf}
+            // href="public/TodoList_demo.png"
             target="_blank"
           >
             Resume

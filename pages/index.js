@@ -52,7 +52,10 @@ export default function Home() {
             <hr />
             <p className="text-center dark:text-gray-300">
               &copy; 2023 Shing Him Yip. The&nbsp;
-              <a className="text-blue-500" href="https://github.com/">
+              <a
+                className="text-blue-500"
+                href="https://github.com/YIPSHINGHIM/Personal_Website"
+              >
                 source code of this homepage
               </a>
               &nbsp;is available at Github. Please feel free to extend it for
