@@ -10,6 +10,7 @@ const nextConfig = {
       loader: "file-loader",
       options: {
         outputPath: "static",
+        name: "[name].[ext]",
       },
     });
 
