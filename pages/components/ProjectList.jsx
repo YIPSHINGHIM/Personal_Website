@@ -20,6 +20,7 @@ const project1 = {
     <IoLogoJavascript key="JavaScript" />,
     <DiSqllite key="SQLite" />,
   ],
+    githubLink:"https://github.com/YIPSHINGHIM/TodoList_using_React_and_Django",
 };
 
 const project2 = {
@@ -35,6 +36,7 @@ const project2 = {
     <DiSqllite key="SQLite" />,
     <AiFillGithub key="Git" />,
   ],
+    githubLink:"https://github.com/YIPSHINGHIM/Team_project",
 };
 
 const project3 = {
@@ -43,6 +45,7 @@ const project3 = {
     "Designed and developed a responsive and visually personal website using Next.js and Tailwind CSS, showcasing my skills, projects, and experiences while providing a smooth user experience.",
   githubLink: "https://github.com/YIPSHINGHIM/Personal_Website",
   Tools: [<TbBrandNextjs key="Next.Js" />, <SiTailwindcss key="Tailwindcss" />],
+    githubLink: 'https://github.com/YIPSHINGHIM/Personal_Website',
 };
 
 const project4 = {
@@ -51,6 +54,7 @@ const project4 = {
     "Stock price message bot project using Python, which involved retrieving live stock prices through Alpha Vantage API and delivering customized price alerts to users via Telegram",
   githubLink: "https://github.com/YIPSHINGHIM/Stock-price-message-bot",
   Tools: [<IoLogoPython key="Python" />],
+    githubLink: 'https://github.com/YIPSHINGHIM/Stock-price-message-bot',
 };
 
 const project5 = {
@@ -59,13 +63,18 @@ const project5 = {
     "Auto Video Uploading Bot using Python and Selenium to automate the process of uploading videos to multiple social media platforms, saving hours of manual work.",
   githubLink: "https://github.com/YIPSHINGHIM/upload_video_bot",
   Tools: [<SiSelenium key="Selenium" />],
+    githubLink:'https://github.com/YIPSHINGHIM/upload_video_bot',
 };
 
 const project6 = {
   Name: "VaR calculation web app",
+<<<<<<< HEAD
   Details:
     "The Value at Risk (VaR) Web Application provides users with a user-friendly interface to accurately calculate and assess their financial risk, contributing to more informed investment decisions and effective risk management.",
   githubLink: "https://github.com/YIPSHINGHIM/upload_video_bot",
+=======
+  Details:'The Value at Risk (VaR) Web Application provides users with a user-friendly interface to accurately calculate and assess their financial risk, contributing to more informed investment decisions and effective risk management.',
+>>>>>>> baf62e37c915fe90257031c93cdc56dd5d549494
   Tools: [
     <FaReact key="React" />,
     <SiDjango key="Django" />,
@@ -73,8 +82,13 @@ const project6 = {
     <DiCss3 key="CSS" />,
     <IoLogoJavascript key="JavaScript" />,
   ],
+<<<<<<< HEAD
 };
 
+=======
+    githubLink:'https://github.com/YIPSHINGHIM/VaR_Web_app',
+};
+>>>>>>> baf62e37c915fe90257031c93cdc56dd5d549494
 export default class ProjectList extends Component {
   render() {
     return (

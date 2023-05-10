@@ -3,8 +3,6 @@ import Link from "next/link";
 function Project({ Name, Details, githubLink = 'https://github.com/YIPSHINGHIM', Tools = [] }) {
   const ToolsIUsed = Tools.map((item) => item);
 
-  
-
   return (
     // TODO need to update the link
     <Link href={githubLink} target="_blank">
