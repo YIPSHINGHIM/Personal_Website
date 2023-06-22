@@ -20,7 +20,7 @@ const project1 = {
     <IoLogoJavascript key="JavaScript" />,
     <DiSqllite key="SQLite" />,
   ],
-    githubLink:"https://github.com/YIPSHINGHIM/TodoList_using_React_and_Django",
+  githubLink: "https://github.com/YIPSHINGHIM/TodoList_using_React_and_Django",
 };
 
 const project2 = {
