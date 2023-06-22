@@ -66,7 +66,7 @@ const project6 = {
   Name: "VaR calculation web app",
   Details:
     "The Value at Risk (VaR) Web Application provides users with a user-friendly interface to accurately calculate and assess their financial risk, contributing to more informed investment decisions and effective risk management.",
-  githubLink: "https://github.com/YIPSHINGHIM/upload_video_bot",
+  githubLink: "https://github.com/YIPSHINGHIM/VaR_Web_app",
   Tools: [
     <FaReact key="React" />,
     <SiDjango key="Django" />,

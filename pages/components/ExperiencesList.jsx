@@ -17,7 +17,7 @@ function ExperiencesList() {
   const obj2 = {
     Title: "Event Support Crew",
     Company: "RHUL SU",
-    Date: "SEP,2022 – PRESENT",
+    Date: "SEP,2022 – AUG,2023",
     details: [
       "Worked as part of a team to support the general running of Students' Union venues, with specific responsibility for event support equipment set-up, late night door entry operation, and ensuring a safe and welcoming environment.",
       "Demonstrated strong conflict management skills by de-escalating difficult situations, maintaining calm and professional demeanor, and seeking assistance from appropriate resources when necessary.",
