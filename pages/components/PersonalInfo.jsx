@@ -12,25 +12,25 @@ export default class PersonalInfo extends Component {
             Shing Him Yip
           </h2>
           <h3 className="text-2xl py-2 md:text-3xl max-w-lg mx-auto dark:text-gray-300">
-            Computer Science Student
+            Software Developer at Content Guru
           </h3>
           <p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-gray-300">
-            I am a highly motivated and enthusiastic computer science student at
-            the Royal Holloway University of London with a passion for software
-            engineering.
+            Software engineer specialising in frontend architecture, WebRTC,
+            and security-critical platforms. I lead React frontend development
+            for video conferencing, screen monitoring, and messaging within a
+            CCaaS product used by enterprise and government clients globally.
           </p>
 
           <p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-gray-300">
-            Having a solid foundation in software engineering and practical
-            experience in full-stack web development. Proficient in Python and
-            JavaScript programming languages, and experienced in using AWS(EB),
-            HTML, CSS, React, and Django.
+            I also maintain large-scale WebRTC infrastructure and contributed
+            to achieving FedRAMP High compliance through container security,
+            vulnerability scanning, and FIPS compliance.
           </p>
 
           <p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-gray-300">
-            Skilled in project management, team collaboration, and Agile
-            methodologies. Also have strong problem-solving skills, and the
-            ability to learn quickly.
+            Skilled in team leadership, problem-solving, and delivering
+            enterprise-grade solutions. Experienced in React, WebRTC, Docker,
+            Python, JavaScript, and cloud technologies.
           </p>
         </div>
 

@@ -3,15 +3,15 @@ import School from "./School";
 const RHUL = {
   Uni: "Royal Holloway, University of London",
   Title: "BSC Computer Science",
-  Date: "2020 – 2023(Expect)",
-  Result: "on track for first class honor",
+  Date: "2020 – 2023",
+  Result: "First Class Honours",
 };
 
 const HKCC = {
-  Uni: "HKCC Hong Kong Community College,The Hong Kong Polytechnic University",
-  Title: "Associate in Engineering",
-  Date: "2019-2020",
-  Result: "GPA:3.36",
+  Uni: "PolyU Hong Kong Community College",
+  Title: "Associate's Degree, Engineering",
+  Date: "2019 – 2020",
+  Result: "GPA: 3.36",
 };
 
 function EducationsList() {

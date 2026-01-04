@@ -13,15 +13,15 @@ function SkillList() {
             <div className="PeopleSkill_inside md:grid grid-cols-2">
               <div className="PeopleSkill_left">
                 <ul className="list-disc list-inside">
-                  <li>Team management Skills</li>
+                  <li>Team Leadership</li>
                   <li>Teamwork Skills</li>
                 </ul>
               </div>
 
               <div className="PeopleSkill_left">
                 <ul className="list-disc list-inside">
-                  <li>Conflict management Skills</li>
-                  <li>Problem Solving Skills</li>
+                  <li>Conflict Management</li>
+                  <li>Problem Solving</li>
                 </ul>
               </div>
             </div>
@@ -39,20 +39,22 @@ function SkillList() {
                 <div className="Proficient_inside md:grid grid-cols-2">
                   <div className="Proficient_left">
                     <ul className="list-disc list-inside">
-                      <li>Python</li>
-                      <li>Django</li>
+                      <li>React.JS</li>
+                      <li>WebRTC</li>
                       <li>JavaScript</li>
-                      <li>git</li>
-                      <li>TDD Workflow</li>
+                      <li>Python</li>
+                      <li>Docker</li>
+                      <li>Git</li>
                     </ul>
                   </div>
 
                   <div className="Proficient_right/">
                     <ul className="list-disc list-inside">
-                      <li>BootStrap</li>
+                      <li>Django</li>
                       <li>HTML</li>
                       <li>CSS</li>
                       <li>SQL</li>
+                      <li>Security Compliance</li>
                     </ul>
                   </div>
                 </div>
@@ -64,21 +66,21 @@ function SkillList() {
                 <div className="Familiar_inside md:grid grid-cols-2">
                   <div className="Familiar_left">
                     <ul className="list-disc list-inside">
-                      <li>React.JS</li>
-                      <li>Next.Js</li>
+                      <li>Next.js</li>
                       <li>Node.js</li>
-                      <li>Express.Js</li>
+                      <li>Express.js</li>
                       <li>Tailwind CSS</li>
+                      <li>Bootstrap</li>
                     </ul>
                   </div>
 
                   <div className="Familiar_right/">
                     <ul className="list-disc list-inside">
-                      <li>Java</li>
-                      <li>JDBC</li>
+                      <li>AWS Cloud Service</li>
                       <li>PostgreSQL</li>
                       <li>MongoDB</li>
-                      <li>AWS Cloud Service</li>
+                      <li>Java</li>
+                      <li>FIPS Compliance</li>
                     </ul>
                   </div>
                 </div>
