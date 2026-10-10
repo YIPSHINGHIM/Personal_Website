@@ -1,0 +1,7 @@
+.header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+.brand { font-size: 17px; font-weight: 800; color: var(--yellow); letter-spacing: -.5px; }
+.nav { display: flex; flex-wrap: wrap; gap: 24px; font-size: 13px; }
+.nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.skip { position: absolute; top: 12px; left: 12px; transform: translateY(-200%); z-index: 10; background: var(--yellow); color: var(--background); padding: 16px; }
+.skip:focus { transform: translateY(0); }
+@media (max-width: 650px) { .header { flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 20px; } .nav { gap: 18px; } }

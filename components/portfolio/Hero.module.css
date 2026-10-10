@@ -1,0 +1,5 @@
+.hero { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: 44px; align-items: center; padding: 72px 0 60px; }
+.heading { font-size: clamp(42px, 6vw, 76px); line-height: .99; letter-spacing: -3px; color: var(--yellow); margin: 24px 0; font-weight: 900; }
+.intro { max-width: 570px; margin: 0 0 25px; }
+.cv { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); }
+@media (max-width: 650px) { .hero { grid-template-columns: minmax(0, 1fr); gap: 44px; padding: 44px 0 52px; } .heading { font-size: clamp(35px, 9vw, 58px); letter-spacing: -2px; } }
