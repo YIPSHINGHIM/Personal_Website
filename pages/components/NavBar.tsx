@@ -1,8 +1,14 @@
+import type { Dispatch, SetStateAction } from "react";
+
+export type NavBarProps = {
+  darkMode: boolean;
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
+};
+
 import Link from "next/link";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import pdf from "../../public/ShingHimYipCV.pdf";
 
-function NavBar(props) {
+function NavBar(props: NavBarProps) {
   return (
     <nav className=" py-10 mb-12 flex justify-between dark:text-gray-300">
       <h1 className="text-xl font-burtons">Hello World</h1>
@@ -15,9 +21,8 @@ function NavBar(props) {
         </li>
         <li>
           <Link
-            className=" bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 "
-            href={pdf}
-            // href="public/TodoList_demo.png"
+            className=" bg-linear-to-r/srgb from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 "
+            href="/ShingHimYipCV.pdf"
             target="_blank"
           >
             Resume

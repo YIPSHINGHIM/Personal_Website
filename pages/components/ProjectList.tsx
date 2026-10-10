@@ -1,3 +1,4 @@
+import type { ProjectProps } from "./Project";
 import { Component } from "react";
 import { AiFillGithub, AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiSqllite } from "react-icons/di";
@@ -20,8 +21,7 @@ const project1 = {
     <IoLogoJavascript key="JavaScript" />,
     <DiSqllite key="SQLite" />,
   ],
-  githubLink: "https://github.com/YIPSHINGHIM/TodoList_using_React_and_Django",
-};
+} satisfies ProjectProps;
 
 const project2 = {
   Name: "Restaurant Management System",
@@ -36,7 +36,7 @@ const project2 = {
     <DiSqllite key="SQLite" />,
     <AiFillGithub key="Git" />,
   ],
-};
+} satisfies ProjectProps;
 
 const project3 = {
   Name: "Personal Website",
@@ -44,7 +44,7 @@ const project3 = {
     "Designed and developed a responsive and visually personal website using Next.js and Tailwind CSS, showcasing my skills, projects, and experiences while providing a smooth user experience.",
   githubLink: "https://github.com/YIPSHINGHIM/Personal_Website",
   Tools: [<TbBrandNextjs key="Next.Js" />, <SiTailwindcss key="Tailwindcss" />],
-};
+} satisfies ProjectProps;
 
 const project4 = {
   Name: "Stock Price Message Bot",
@@ -52,7 +52,7 @@ const project4 = {
     "Stock price message bot project using Python, which involved retrieving live stock prices through Alpha Vantage API and delivering customized price alerts to users via Telegram",
   githubLink: "https://github.com/YIPSHINGHIM/Stock-price-message-bot",
   Tools: [<IoLogoPython key="Python" />],
-};
+} satisfies ProjectProps;
 
 const project5 = {
   Name: "Auto Video Uploading Bot",
@@ -60,7 +60,7 @@ const project5 = {
     "Auto Video Uploading Bot using Python and Selenium to automate the process of uploading videos to multiple social media platforms, saving hours of manual work.",
   githubLink: "https://github.com/YIPSHINGHIM/upload_video_bot",
   Tools: [<SiSelenium key="Selenium" />],
-};
+} satisfies ProjectProps;
 
 const project6 = {
   Name: "VaR calculation web app",
@@ -74,7 +74,7 @@ const project6 = {
     <DiCss3 key="CSS" />,
     <IoLogoJavascript key="JavaScript" />,
   ],
-};
+} satisfies ProjectProps;
 
 export default class ProjectList extends Component {
   render() {

@@ -1,4 +1,11 @@
-function School({ Uni, Title, Date, Result }) {
+export type SchoolProps = {
+  Uni: string;
+  Title: string;
+  Date: string;
+  Result: string;
+};
+
+function School({ Uni, Title, Date, Result }: SchoolProps) {
   return (
     <div className="School">
       <h3 className="text-3xl font-semibold">{Title}</h3>
