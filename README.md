@@ -41,3 +41,13 @@ Playwright starts and stops its own production server at http://127.0.0.1:3000; 
 Next.js route type generation precedes strict TypeScript checking. ESLint runs separately from builds. In restricted environments where Turbopack cannot start its CSS worker, `npm run build -- --webpack` is an available diagnostic fallback; normal builds use the Next.js default.
 
 For a manual production preview, run `npm start` after building. No deployment or publishing occurs automatically.
+
+### Local browser limitation
+
+On the current macOS host, the downloaded Firefox engine exits before page load with `Could not find profile folder`, including when given an existing persistent profile. Chromium, WebKit, and mobile Chromium can be checked locally with:
+
+```bash
+npm run test:e2e -- --project=chromium --project=webkit --project=mobile
+```
+
+Firefox stays enabled in the default suite and Linux CI; its local UI results remain unverified. On macOS WebKit, the keyboard test uses Option+Tab to traverse links when Safari's full keyboard-access preference is disabled.

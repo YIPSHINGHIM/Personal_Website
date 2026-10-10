@@ -11,3 +11,4 @@
 .backCaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 8px; font-size: 12px; letter-spacing: .5px; background: var(--background); color: var(--yellow); }
 .fallback { font-size: 15px; }
 @media (prefers-reduced-motion: reduce) { .inner { transition: none; } }
+.tile:focus-visible { outline-color: var(--yellow); }
