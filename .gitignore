@@ -42,3 +42,7 @@ jspm_packages
 # Generated TypeScript files
 next-env.d.ts
 *.tsbuildinfo
+
+# Browser test artifacts
+playwright-report/
+test-results/
