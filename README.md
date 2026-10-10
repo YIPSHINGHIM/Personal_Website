@@ -1,12 +1,10 @@
-# Shing Him Yip Portfolio
+# Shing Him Yip — Personal Studio
 
-Personal portfolio built with Next.js 16, React 19, strict TypeScript, and Tailwind CSS 4 using the Pages Router.
+A black-and-yellow portfolio for full-time engineering work, independent SaaS products, and selected freelance websites. Built with Next.js App Router, React, strict TypeScript, and CSS Modules. The SHY monogram flips to reveal the original-colour portrait.
 
-## Requirements
+## Development
 
-Node.js 20.9 or later and npm. Node.js 22 LTS is recommended for deployment and matches the installed Node type declarations. Tailwind 4 targets Safari 16.4+, Chrome 111+, and Firefox 128+.
-
-## Local development
+Use Node.js 22.22.2+ (or a supported newer LTS) for development, testing, and CI. The app retains its Node >=20.9 runtime declaration; test tooling needs a newer runtime.
 
 ```bash
 npm ci
@@ -15,26 +13,31 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Validation and production
+## Structure
+
+- `app/` owns layout, homepage, 404, global styles, and the preserved `/api/hello` route.
+- `components/portfolio/` contains twelve focused UI components, colocated tests, and CSS Modules.
+- `content/portfolio.ts` owns copy, career/education records, skills, featured projects, and older projects.
+- `public/him-removebg.png` is the unchanged portrait; `public/ShingHimYipCV.pdf` remains available at its original URL.
+
+Page sections are Server Components. Only `PortraitFlip` is a Client Component. The theme is fixed; no Tailwind, runtime font service, or animation library is required. Older projects use a native disclosure.
+
+## Verification
 
 ```bash
+npm run test
+npm run test:coverage
 npm run typecheck
 npm run lint
 npm run build
-npm start
+npx playwright install chromium firefox webkit
+npm run test:e2e
 ```
 
-Typechecking generates Next.js route types before running the strict TypeScript compiler. ESLint runs separately: Next.js 16 no longer provides `next lint` or runs lint during builds.
+Vitest and React Testing Library test every portfolio component and content/API/layout contracts. Coverage requires >=90% statements/functions/lines and >=85% branches across all portfolio components and content modules. Browser tests run against a production build and cover layout, navigation, portrait interactions, image failure, reduced motion, routes, assets, and axe accessibility checks.
 
-Dev and build scripts use Turbopack, the default in Next.js 16. In restricted environments that prevent its CSS worker from opening a local port, use `npm run dev -- --webpack` or `npm run build -- --webpack`.
+Playwright starts and stops its own production server at http://127.0.0.1:3000; keep that port free. Reports are in `playwright-report/` and failure artifacts in `test-results/`. CI uses Node 22 and installs all three browser engines.
 
-## Configuration and content
+Next.js route type generation precedes strict TypeScript checking. ESLint runs separately from builds. In restricted environments where Turbopack cannot start its CSS worker, `npm run build -- --webpack` is an available diagnostic fallback; normal builds use the Next.js default.
 
-- `next.config.ts` uses the Next.js `NextConfig` type.
-- `eslint.config.mts` uses the Next.js React and TypeScript rules, loaded through the direct `jiti` development dependency.
-- `postcss.config.mjs` loads `@tailwindcss/postcss` with a PostCSS type annotation.
-- `styles/globals.css` defines the Tailwind theme, custom font, class-controlled dark variant, and application source directory. Existing colors and effective default breakpoints are preserved.
-
-The homepage is `pages/index.tsx`; portfolio components are in `pages/components/` and `pages/SkillList.tsx`. Files under `pages/` also become public routes; that existing routing behavior is retained.
-
-The resume is served from `public/ShingHimYipCV.pdf` at `/ShingHimYipCV.pdf`. The portrait uses `next/image`.
+For a manual production preview, run `npm start` after building. No deployment or publishing occurs automatically.
