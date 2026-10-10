@@ -30,3 +30,4 @@ h3 { line-height: 1.2; }
 .text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; }
 @media (max-width: 650px) { .site-shell { padding: 24px; } .section { padding: 32px 0 38px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .primary-link { transition: none; } }
+.primary-link:focus-visible { outline-color: var(--yellow); }

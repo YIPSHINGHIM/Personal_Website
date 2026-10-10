@@ -24,3 +24,22 @@ test('keyboard skip link and portrait have visible focus', async ({ page, browse
   await expect(tile).toHaveCSS('outline-style', 'solid');
   await expect(tile).toHaveCSS('outline-color', 'rgb(255, 214, 0)');
 });
+
+test('filled primary links retain contrasting keyboard focus', async ({ page }) => {
+  await page.goto('/');
+  await page.keyboard.press('Tab');
+  const work = page.getByRole('link', { name: 'Explore my work', exact: true });
+  await work.focus();
+  await expect(work).toHaveCSS('outline-style', 'solid');
+  await expect(work).toHaveCSS('outline-color', 'rgb(255, 214, 0)');
+  const linkedin = page.getByRole('link', { name: 'Connect on LinkedIn', exact: true });
+  await linkedin.focus();
+  await expect(linkedin).toHaveCSS('outline-style', 'solid');
+  await expect(linkedin).toHaveCSS('outline-color', 'rgb(11, 11, 11)');
+  await page.goto('/missing-page');
+  await page.keyboard.press('Tab');
+  const home = page.getByRole('link', { name: 'Back to home' });
+  await home.focus();
+  await expect(home).toHaveCSS('outline-style', 'solid');
+  await expect(home).toHaveCSS('outline-color', 'rgb(255, 214, 0)');
+});
