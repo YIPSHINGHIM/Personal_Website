@@ -1,0 +1,6 @@
+.heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 28px; }
+.role { color: var(--muted); font-size: 12px; text-align: right; line-height: 1.8; }
+.role span { display: block; }
+.role span:first-child { color: var(--text); }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+@media (max-width: 650px) { .heading { flex-direction: column; gap: 14px; } .role { text-align: left; } .grid { grid-template-columns: minmax(0, 1fr); gap: 30px; } }

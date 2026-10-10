@@ -1,0 +1,8 @@
+.disclosure { margin-top: 26px; }
+.disclosure summary { cursor: pointer; color: var(--yellow); font-size: 14px; padding: 15px 0; }
+.list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; list-style: none; padding: 20px 0 0; margin: 0; }
+.list li { border-top: 1px solid var(--line); padding-top: 20px; }
+.list h3 { font-size: 20px; margin: 0; letter-spacing: -.5px; }
+.list p { font-size: 14px; }
+.list a { display: inline-flex; align-items: center; min-height: 44px; color: var(--yellow); font-size: 13px; }
+@media (max-width: 650px) { .list { grid-template-columns: minmax(0, 1fr); } }

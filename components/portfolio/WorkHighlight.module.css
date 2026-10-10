@@ -1,0 +1,5 @@
+.card { border-top: 2px solid var(--yellow); padding-top: 20px; min-width: 0; }
+.label { color: var(--yellow); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+.card h3 { font-size: 23px; margin: 18px 0 10px; letter-spacing: -.5px; }
+.card p { margin: 0; }
+.tags { color: var(--yellow); font-size: 12px; line-height: 1.8; margin-top: 18px; }
