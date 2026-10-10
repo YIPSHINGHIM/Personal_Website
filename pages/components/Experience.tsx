@@ -1,4 +1,11 @@
-function Experience({ Title, Company, Date, details = [] }) {
+export type ExperienceProps = {
+  Title: string;
+  Company: string;
+  Date: string;
+  details?: string[];
+};
+
+function Experience({ Title, Company, Date, details = [] }: ExperienceProps) {
   // console.log(details[0]);
 
   const listItems = details.map((item) => (

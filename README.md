@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shing Him Yip Portfolio
 
-## Getting Started
+Personal portfolio built with Next.js 16, React 19, strict TypeScript, and Tailwind CSS 4 using the Pages Router.
 
-First, run the development server:
+## Requirements
+
+Node.js 20.9 or later and npm. Node.js 22 LTS is recommended for deployment and matches the installed Node type declarations. Tailwind 4 targets Safari 16.4+, Chrome 111+, and Firefox 128+.
+
+## Local development
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Validation and production
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Typechecking generates Next.js route types before running the strict TypeScript compiler. ESLint runs separately: Next.js 16 no longer provides `next lint` or runs lint during builds.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Dev and build scripts use Turbopack, the default in Next.js 16. In restricted environments that prevent its CSS worker from opening a local port, use `npm run dev -- --webpack` or `npm run build -- --webpack`.
 
-## Learn More
+## Configuration and content
 
-To learn more about Next.js, take a look at the following resources:
+- `next.config.ts` uses the Next.js `NextConfig` type.
+- `eslint.config.mts` uses the Next.js React and TypeScript rules, loaded through the direct `jiti` development dependency.
+- `postcss.config.mjs` loads `@tailwindcss/postcss` with a PostCSS type annotation.
+- `styles/globals.css` defines the Tailwind theme, custom font, class-controlled dark variant, and application source directory. Existing colors and effective default breakpoints are preserved.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The homepage is `pages/index.tsx`; portfolio components are in `pages/components/` and `pages/SkillList.tsx`. Files under `pages/` also become public routes; that existing routing behavior is retained.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The resume is served from `public/ShingHimYipCV.pdf` at `/ShingHimYipCV.pdf`. The portrait uses `next/image`.

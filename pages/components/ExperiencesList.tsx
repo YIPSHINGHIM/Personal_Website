@@ -1,3 +1,4 @@
+import type { ExperienceProps } from "./Experience";
 import Experience from "./Experience";
 
 function ExperiencesList() {
@@ -12,7 +13,7 @@ function ExperiencesList() {
       "Selected for a specialised team delivering FedRAMP High readiness and audit success",
       "Led FedRAMP compliance efforts including container hardening and signing, vulnerability scanning, automated image security enforcement, and FIPS compliance",
     ],
-  };
+  } satisfies ExperienceProps;
 
   const obj2 = {
     Title: "Graduate Software Engineer",
@@ -24,7 +25,7 @@ function ExperiencesList() {
       "Participated in code reviews and team collaboration",
       "Supported deployment and maintenance of production systems",
     ],
-  };
+  } satisfies ExperienceProps;
 
   const obj3 = {
     Title: "Event Support Crew",
@@ -37,7 +38,7 @@ function ExperiencesList() {
       "Worked collaboratively with team members to divide responsibilities, communicate effectively, and support one another to ensure efficient and effective event operations",
       "Consistently received positive feedback from venue management, event organizers, and customers for professionalism, attentiveness, and attention to detail",
     ],
-  };
+  } satisfies ExperienceProps;
 
   const obj4 = {
     Title: "Full Stack Web Developer Intern",
@@ -50,7 +51,7 @@ function ExperiencesList() {
       "Integrated the Stripe payment system to support the backend",
       "Used HTML, CSS, and React to develop the frontend",
     ],
-  };
+  } satisfies ExperienceProps;
 
   return (
     <div className="pt-10 dark:text-gray-300">

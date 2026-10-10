@@ -1,3 +1,4 @@
+import type { SchoolProps } from "./School";
 import School from "./School";
 
 const RHUL = {
@@ -5,14 +6,14 @@ const RHUL = {
   Title: "BSC Computer Science",
   Date: "2020 – 2023",
   Result: "First Class Honours",
-};
+} satisfies SchoolProps;
 
 const HKCC = {
   Uni: "PolyU Hong Kong Community College",
   Title: "Associate's Degree, Engineering",
   Date: "2019 – 2020",
   Result: "GPA: 3.36",
-};
+} satisfies SchoolProps;
 
 function EducationsList() {
   return (
@@ -20,7 +21,7 @@ function EducationsList() {
       <div className="EducationsList md:grid grid-cols-12">
         <div
           // style={{ background: "red" }}
-          class="EducationsList_left md:col-span-4"
+          className="EducationsList_left md:col-span-4"
         >
           <h2 className="text-4xl py-1 font-bold">
             Education<span className="text-cyan-600">.</span>
@@ -28,7 +29,7 @@ function EducationsList() {
         </div>
         <div
           // style={{ background: "blue" }}
-          class="EducationsList_right md:col-span-8"
+          className="EducationsList_right md:col-span-8"
         >
           <School {...RHUL} />
           <School {...HKCC} />

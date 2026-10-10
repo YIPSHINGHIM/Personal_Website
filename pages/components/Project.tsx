@@ -1,11 +1,20 @@
+import type { ReactNode } from "react";
+
+export type ProjectProps = {
+  Name: string;
+  Details: string;
+  githubLink?: string;
+  Tools?: ReactNode[];
+};
+
 import Link from "next/link";
 
-function Project({ Name, Details, githubLink = 'https://github.com/YIPSHINGHIM', Tools = [] }) {
+function Project({ Name, Details, githubLink = 'https://github.com/YIPSHINGHIM', Tools = [] }: ProjectProps) {
   const ToolsIUsed = Tools.map((item) => item);
 
   return (
     <Link href={githubLink} target="_blank">
-      <div className="text-center shadow-lg p-10 w-85 rounded-xl dark:bg-gray-700 cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300">
+      <div className="text-center shadow-lg p-10 rounded-xl dark:bg-gray-700 cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300">
         <h3 className="text-lg font-medium pt-8 pb-2  ">{Name}</h3>
         <p className="py-2 flex">{Details}</p>
         <h4 className="py-4 text-teal-600">Tech stack</h4>
